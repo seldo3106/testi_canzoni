@@ -1,0 +1,38 @@
+.barra{
+    background-image: linear-gradient(#206A5D,#81B214);
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    color: white;
+    height: 370px;
+}
+#tedio{
+    margin-left: 350px;
+}
+#copertina{
+    margin-top: -90px;
+    margin-left: 10px;
+}
+#collegamento{
+    position: relative;
+    top: 213px;
+    color: white;
+    /* margin-left: 100px; */
+}
+#dati1{
+    margin-left: 350px;
+    margin-top: -230px;
+}
+#dati2{
+    margin-left: 520px;
+    margin-top: -42px;
+}
+#info1{
+    margin-left: 350px;
+    margin-top: -20px;
+}
+#info2{
+    margin-left: 520px;
+    margin-top: -34px;
+}
+#testo{
+    margin-left: 50px;
+}
