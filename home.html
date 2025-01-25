@@ -6,36 +6,30 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet">
 		<link rel="icon" href="logo.png" type="image/x-icon">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<style>
 			body{
 				background-color: #FFFACC;
+				margin: 0;
 			}
 			.barra{
 				height: 100px;
 				display: flex;
 				justify-content: center;
-    			align-items: center;
+				align-items: center;
 				padding: 0;
 				margin: 0;
 				width: 100%;
-				/* justify-content: flex-start;
-				align-items: center;
-				position: relative;
-				top: -20px;
-				left: -10px; */
 				background-color: #FFEFBD;
 				width: 100%;
 			}
 			#titolo_barra{
-				position: relative;
-				left: 20px;
+				display: flex;
+				justify-items: flex-start;
+				align-items: center;
 			}
 			.corpo{
-				
-				margin-top: -20px;
-				/* position: relative;
-				top: -40px;
-				left: -5px; */
+				margin-left: 50px;
 			}
 			.corpus{
 				display: flex;
@@ -43,7 +37,7 @@
 				align-items: center;
 			}
 			.artista{
-				margin-left: 50px;
+				margin-right: 50px;
 				width: 210px;
 				border-radius: 10px;
 				text-align: center;
@@ -54,12 +48,21 @@
 				border-style: solid;
 				border-radius: 150px;
 			}
+			@media(max-width: 500px){
+				.corpus{
+					display: block;
+				}
+				.artista{
+					width: 100%;
+					display: block;
+				}
+			}
 
 		</style>
 	</head>
 	<body>
 		<div class="barra">
-			<h1 id="titolo_barra">Sei sul sito dove puoi vedere i testi delle canzoni</h1>
+			<h1 id="titolo_barra">ciao, spero piaccia(non ho un logo)</h1>
 			<!-- <img src="logo_par.png" height="50px"> -->
 		</div>
 		<div class="corpo">
@@ -75,7 +78,6 @@
 				</div>
 			</div>
 		</div>
-		<a href="note.html"><p>per informazioni cliccare qui</p></a>
 	</body>
 	
 </html>
