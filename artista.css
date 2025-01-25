@@ -1,0 +1,31 @@
+img{
+    margin-left: 10px;
+}
+h3{
+    margin-top: 0px;
+}
+.barra{
+    /* border-bottom-style: groove; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.corpo{
+    background-color: #FFFACC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.album{
+    background-color: white;
+    border-style: groove;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 470px;
+    width: 1000px;
+}
+.tracce{
+    position: relative;
+    left: 400px;
+    margin-top: -400px;
+}
