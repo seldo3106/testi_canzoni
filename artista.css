@@ -1,5 +1,11 @@
 body{
+    font-family: 'Work Sans';
+    font-style: italic;
+    font-weight: 100 900;
+    font-display: swap;
     margin: 0;
+    margin: 0;
+    background-color: #FFFACC;
 }
 img{
     margin-left: 10px;
@@ -11,12 +17,10 @@ h3{
 h1{
     text-align: center;
 }
-body{
-    margin: 0;
-    background-color: #FFFACC;
-}
 .barra{
+    margin: 0;
     height: 70px;
+    width: 100%;
     justify-content: center;
     align-items: center;
     display: grid;
@@ -45,15 +49,20 @@ body{
 }
 .tracce{
     position: relative;
-    left: 400px;
+    left: 420px;
     margin-top: -400px;
 }
+.v_deluxe{
+    display: block;
+    position: relative;
+    left: 420px;
+}
+/* .deluxe{
+    margin-top: -10px;
+} */
 @media(max-width: 500px){
     .barra{
         grid-template-columns: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;grid-template-columns: none;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -75,5 +84,9 @@ body{
         width: 360px;
         height: 360px;
         margin-right: 10px;
+    }
+    .v_deluxe{
+        display: block;
+        left: 10px;
     }
 }

@@ -4,8 +4,7 @@
 		<title>Cinzofi</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet">
-		<link rel="icon" href="logo.png" type="image/x-icon">
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<style>
 			body{
@@ -27,9 +26,14 @@
 				display: flex;
 				justify-items: flex-start;
 				align-items: center;
+				text-align: center;
 			}
 			.corpo{
 				margin-left: 50px;
+				font-family: 'Work Sans';
+				font-style: italic;
+				font-weight: 100 900;
+				font-display: swap;
 			}
 			.corpus{
 				display: flex;
@@ -47,6 +51,7 @@
 				place-items: center;
 				border-style: solid;
 				border-radius: 150px;
+				border: 0px;
 			}
 			@media(max-width: 500px){
 				.corpus{
@@ -56,13 +61,16 @@
 					width: 100%;
 					display: block;
 				}
+				.corpo{
+					margin-left: 0px;
+				}
 			}
 
 		</style>
 	</head>
 	<body>
 		<div class="barra">
-			<h1 id="titolo_barra">ciao, spero piaccia(non ho un logo)</h1>
+			<h1 id="titolo_barra">ciao, spero piaccia<br>(non ho un logo)</h1>
 			<!-- <img src="logo_par.png" height="50px"> -->
 		</div>
 		<div class="corpo">
@@ -70,11 +78,15 @@
 			<div class="corpus">
 				<div class="artista">
 					<p>tha supreme</p>
-					<a href="./thasup/thasup.html"><img src="thasupo.gif" width="200px" height="200px"></a>
+					<a href="./thasup/thasup.html"><img src="./thasup/thasupo.gif" width="200px" height="200px"></a>
 				</div>
 				<div class="artista">
 					<p>ghali</p>
 					<a href="./ghali/ghali.html"><img src="https://media.tenor.com/U1ER_zJkAJEAAAAM/ghali-face-weird.gif" width="200px" height="200px"></a>
+				</div>
+				<div class="artista">
+					<p>lazza</p>
+					<a href="./lazza/lazza.html"><img src="./lazza/lazza.png" width="200px" height="200px"></a>
 				</div>
 			</div>
 		</div>
