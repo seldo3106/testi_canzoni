@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Aggiunta</title>
+        <style>
+            #area{
+                position: relative;
+                left: 300px;
+                top: -270px;
+            }
+            #testo{
+                width: 400px;
+                height: 500px;
+            }
+            button{
+                position: relative;
+                top: -500px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Aggiungi una canzone</h1>
+        <p>Produttore</p><br>
+        <input type="text" id="produttore">
+        <p>Autore</p><br>
+        <input type="text" id="autore">
+        <p>Album</p><br>
+        <input type="text" id="album">
+        <p>Titolo</p><br>
+        <input type="text" id="titolo">
+        <div id="area">
+            <p>Testo</p>
+            <textarea id="testo"></textarea>
+        </div>
+        <button onclick="salva()">FATTO</button>
+    </body>
+    <script>
+        function salva() {
+            let produttore = document.getElementById("produttore").value;
+            let autore = document.getElementById("autore").value;
+            let titolo = document.getElementById("titolo").value;
+            let testo = document.getElementById("testo").value;
+            let album = document.getElementById("album").value;
+            let titoloA = titolo.replace(/ /g, "_");
+            let albumA = album.replace(/ /g, "_");
+            let righe = testo.split('\n'), testoA = '';
+            let i;
+
+            // Aggiungere i <br> e andare a capo nel file
+            for (i = 0; i < righe.length; i++) {
+                testoA += righe[i] + "<br>\n";
+            }
+
+            const contenuto = `
+                <!DOCTYPE html>
+                <html>
+                    <head>
+                        <title>THA SUPREME</title>
+                        <link rel="stylesheet" href="style_${albumA}.css">
+                        <link rel="preconnect" href="https://fonts.googleapis.com">
+                        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+                    </head>
+                    <body>
+                        <div class="barra">
+                            <a href="../${autore}.html">torna indietro</a>
+                            <div id="tedio">
+                                <h1>${titolo}</h1>
+                                <a href="https://www.youtube.com/watch?v=jxOK1deHmQw" id="collegamento">Collegamento alla canzone</a>
+                            </div>
+                            <img src="sfaciolate.png" width="300" height="300" id="copertina"><br>
+                            <h4 id="dati1">Prodotto da:</h4>
+                            <h4 id="dati2">Cantato da:</h4>
+                            <p id="info1">${produttore}</p>
+                            <p id="info2">${autore}</p>
+                        </div>
+                        <hr>
+                        <div id="testo">
+                            <h3>Testo della canzone</h3>
+                            <p>${testoA}</p>
+                        </div>
+                    </body>
+                </html>`;
+
+            // Creazione del file Blob
+            const blob = new Blob([contenuto], { type: 'text/html' });
+
+            // Creazione del link di download
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = `${titoloA}.html`; // Nome del file
+            link.style.display = 'none';
+
+            // Aggiunta del link alla pagina e clic automatico per scaricare
+            document.body.appendChild(link);
+            link.click();
+
+            // Rimozione del link dalla pagina
+            document.body.removeChild(link);
+
+            alert("File salvato con nome: " + titoloA + ".html");
+        }
+
+
+    </script>
+</html>
