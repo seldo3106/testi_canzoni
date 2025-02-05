@@ -6,10 +6,10 @@
             #area{
                 position: relative;
                 left: 300px;
-                top: -270px;
+                top: -480px;
             }
             #testo{
-                width: 400px;
+                width: 900px;
                 height: 500px;
             }
             button{
@@ -22,12 +22,16 @@
         <h1>Aggiungi una canzone</h1>
         <p>Produttore</p><br>
         <input type="text" id="produttore">
-        <p>Autore</p><br>
+        <p>Autori</p><br>
         <input type="text" id="autore">
+        <p>Autore</p><br>
+        <input type="text" id="autori">
         <p>Album</p><br>
         <input type="text" id="album">
         <p>Titolo</p><br>
         <input type="text" id="titolo">
+        <p>link</p><br>
+        <input type="text" id="link">
         <div id="area">
             <p>Testo</p>
             <textarea id="testo"></textarea>
@@ -36,6 +40,8 @@
     </body>
     <script>
         function salva() {
+            const collegamento = document.getElementById("link").value;
+            const autori = document.getElementById("autori").value;
             let produttore = document.getElementById("produttore").value;
             let autore = document.getElementById("autore").value;
             let titolo = document.getElementById("titolo").value;
@@ -57,18 +63,20 @@
                     <head>
                         <title>THA SUPREME</title>
                         <link rel="stylesheet" href="style_${albumA}.css">
+                        <link rel="stylesheet" href="../../steto.css">
                         <link rel="preconnect" href="https://fonts.googleapis.com">
                         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
                         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+                        <meta name="viewport" content="width=device-width, initial-scale=1">
                     </head>
                     <body>
                         <div class="barra">
-                            <a href="../${autore}.html">torna indietro</a>
+                            <a href="../${autori}.html">torna indietro</a>
                             <div id="tedio">
                                 <h1>${titolo}</h1>
-                                <a href="https://www.youtube.com/watch?v=jxOK1deHmQw" id="collegamento">Collegamento alla canzone</a>
+                                <a href="${collegamento}" id="collegamento">Collegamento alla canzone</a>
                             </div>
-                            <img src="sfaciolate.png" width="300" height="300" id="copertina"><br>
+                            <img src="${albumA}.png" width="300" height="300" id="copertina"><br>
                             <h4 id="dati1">Prodotto da:</h4>
                             <h4 id="dati2">Cantato da:</h4>
                             <p id="info1">${produttore}</p>

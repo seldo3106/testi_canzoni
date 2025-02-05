@@ -1,4 +1,5 @@
 body{
+    overflow-x: hidden;
     font-family: 'Work Sans';
     font-style: italic;
     font-weight: 100 900;
@@ -38,6 +39,9 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.corpo a{
+    text-decoration: none;
 }
 .album{
     background-color: white;

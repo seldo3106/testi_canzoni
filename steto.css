@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+.barra{
+    /* background-image: linear-gradient(#6330A6,#A63067); */
+    /* font-family: "Comic Sans MS", "Comic Sans", cursive; */
+    font-family: "Comic Sans MS", "Comic Sans";
+    color: white;
+    height: 370px;
+}
+#tedio{
+    margin-left: 350px;
+}
+#copertina{
+    margin-top: -90px;
+    margin-left: 10px;
+}
+#collegamento{
+    position: relative;
+    top: 213px;
+    color: white;
+}
+#dati1{
+    margin-left: 350px;
+    margin-top: -230px;
+}
+#dati2{
+    margin-left: 670px;
+    margin-top: -42px;
+}
+#info1{
+    margin-left: 350px;
+    margin-top: -20px;
+}
+#info2{
+    margin-left: 670px;
+    margin-top: -40px;
+}
+#testo{
+    margin-left: 50px;
+}
+
+@media(max-width: 500px){
+    .barra{
+        display: block;
+        height: fit-content;
+        margin: 0;
+        width: 100%;
+    }
+    #tedio{
+        margin-left: 20px;
+    }
+    #copertina{
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    #collegamento{
+        position: relative;
+        top: 0px;
+        color: white;
+    }
+    #dati1{
+        margin-left: 20px;
+        margin-top: 0px;
+    }
+    #dati2{
+        margin-left: 20px;
+        margin-top: -4px;
+        /* padding-bottom: 30px; */
+        
+    }
+    #info1{
+        position: relative;
+        margin-left: 0px;
+        margin-top: 0px;
+        left: 130px;
+        top: -83px;
+    }
+    #info2{
+        position: relative;
+        margin-left: 0px;
+        margin-top: 0px;
+        left: 130px;
+        top: -81px;
+    }
+    #testo{
+        margin-left: 10px;
+        font-size: 15px;
+    }
+
+}
