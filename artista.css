@@ -61,9 +61,33 @@ h1{
     position: relative;
     left: 420px;
 }
-/* .deluxe{
-    margin-top: -10px;
-} */
+.singoli{
+    height: fit-content;
+    display: flex;
+    overflow-x: scroll;
+}
+.barraSin{
+    background-color: #B0D7FF;
+}
+.barraSin h4{
+    text-align: center;
+}
+.singolo{
+    background-color: white;
+    border-style: groove;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    height: 333px;
+}
+.singolo img{
+    width: 250px;
+    margin: 10px;
+    margin-top: 0px;
+}
+.singoli h3{
+    text-align: center;
+}
+
 @media(max-width: 500px){
     .barra{
         grid-template-columns: none;
@@ -92,5 +116,17 @@ h1{
     .v_deluxe{
         display: block;
         left: 10px;
+    }
+    .singoli{
+        display: block;
+        overflow: hidden;
+    }
+    .singolo{
+        margin-bottom: 20px;
+        height: 433px;
+        width: fit-content;
+    }
+    .singolo img{
+        width: 360px;
     }
 }
