@@ -3,6 +3,10 @@
     <head>
         <title>Aggiunta</title>
         <style>
+            body{
+                overflow-y: hidden;
+                overflow-x: hidden;
+            }
             #area{
                 position: relative;
                 left: 300px;
@@ -23,11 +27,15 @@
         <p>Produttore</p><br>
         <input type="text" id="produttore">
         <p>Autori</p><br>
-        <input type="text" id="autore">
-        <p>Autore</p><br>
         <input type="text" id="autori">
-        <p>Album</p><br>
+        <p>Autore</p><br>
+        <input type="text" id="autore">
+        <p>Album</p>
         <input type="text" id="album">
+        <select id="estensione">
+            <option value="jpg">.jpg</option>
+            <option value="png">.png</option>
+        </select><br>
         <p>Titolo</p><br>
         <input type="text" id="titolo">
         <p>link</p><br>
@@ -47,6 +55,8 @@
             let titolo = document.getElementById("titolo").value;
             let testo = document.getElementById("testo").value;
             let album = document.getElementById("album").value;
+            let estensione = document.getElementById("estensione").value;
+            let autoreA = autore.replace(/ /g, "_");
             let titoloA = titolo.replace(/ /g, "_");
             let albumA = album.replace(/ /g, "_");
             let righe = testo.split('\n'), testoA = '';
@@ -58,37 +68,46 @@
             }
 
             const contenuto = `
-                <!DOCTYPE html>
-                <html>
-                    <head>
-                        <title>THA SUPREME</title>
-                        <link rel="stylesheet" href="style_${albumA}.css">
-                        <link rel="stylesheet" href="../../steto.css">
-                        <link rel="preconnect" href="https://fonts.googleapis.com">
-                        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-                        <meta name="viewport" content="width=device-width, initial-scale=1">
-                    </head>
-                    <body>
-                        <div class="barra">
-                            <a href="../${autori}.html">torna indietro</a>
-                            <div id="tedio">
-                                <h1>${titolo}</h1>
-                                <a href="${collegamento}" id="collegamento">Collegamento alla canzone</a>
-                            </div>
-                            <img src="${albumA}.png" width="300" height="300" id="copertina"><br>
-                            <h4 id="dati1">Prodotto da:</h4>
-                            <h4 id="dati2">Cantato da:</h4>
-                            <p id="info1">${produttore}</p>
-                            <p id="info2">${autore}</p>
-                        </div>
-                        <hr>
-                        <div id="testo">
-                            <h3>Testo della canzone</h3>
-                            <p>${testoA}</p>
-                        </div>
-                    </body>
-                </html>`;
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>${autore}</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../../steto.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="barra">
+            <img src="${albumA}.${estensione}" width="300" height="300" id="copertina">
+            <div id="tedio">
+                <h1>${titolo}</h1>
+                <div id="info">
+                    <div class="dati">
+                        <h4 id="dati1">Prodotto da:</h4>
+                        <p id="info1">${produttore}</p>
+                    </div>
+                    <div class="dati">
+                        <h4 id="dati2">Cantato da:</h4>
+                        <p id="info2">${autori}</p>
+                    </div>
+                </div>
+                <a href="${collegamento}" id="collegamento"><p>Collegamento alla canzone</p></a>
+            </div>
+        </div>
+        <a href="../${autoreA}.html">
+			<div id="indietro">
+				<img src="../../asset/left-arrow.png" height="75px">
+			</div>
+		</a>
+        <div id="testo">
+            <h3>Testo della canzone</h3>
+            <p>${testoA}</p>
+        </div>
+    </body>
+</html>`;
 
             // Creazione del file Blob
             const blob = new Blob([contenuto], { type: 'text/html' });

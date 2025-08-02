@@ -1,92 +1,104 @@
 body{
     margin: 0;
     overflow-x: hidden;
+    /* background-color: #FFFACC; */
 }
+
+/* Barra */
 .barra{
     /* background-image: linear-gradient(#6330A6,#A63067); */
     /* font-family: "Comic Sans MS", "Comic Sans", cursive; */
     font-family: "Comic Sans MS", "Comic Sans";
     color: white;
-    height: 370px;
+    display: flex;
+    align-items: center;
+}
+.barra a{
+    color: #FFFFFF00;
 }
 #tedio{
-    margin-left: 350px;
+    height: 300px;
+    display: flexbox;
+    flex-grow: 10;
+}
+#info{
+    display: flex;
+    align-items: center;
+}
+.dati{
+    width: 40%;
 }
 #copertina{
-    margin-top: -90px;
-    margin-left: 10px;
+    margin: 30px 30px 30px 150px;
 }
 #collegamento{
-    position: relative;
-    top: 213px;
     color: white;
 }
-#dati1{
-    margin-left: 350px;
-    margin-top: -230px;
+#collegamento p{
+    margin-top: 110px;
 }
-#dati2{
-    margin-left: 670px;
-    margin-top: -42px;
-}
-#info1{
-    margin-left: 350px;
-    margin-top: -20px;
-}
-#info2{
-    margin-left: 670px;
-    margin-top: -40px;
+#tedio h1{
+    margin-top: 0;
 }
 #testo{
-    margin-left: 50px;
+    margin-left: 150px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Pulsante */
+#indietro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: #CFBCDF;
+    bottom: 30px;
+    left: 30px;
+    width: 95px;
+    height: 95px;
+    border-radius: 100px;
+}
+#indietro:hover{
+    background-color: #cfbcdf9d;
+}
+#indietro:active{
+    background-color: #CFBCDF;
 }
 
 @media(max-width: 500px){
     .barra{
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         height: fit-content;
         margin: 0;
         width: 100%;
     }
     #tedio{
-        margin-left: 20px;
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #collegamento p{
+        margin-top: 20px;
+    }
+    #info{
+        width: 100%;
+        margin-left: 30%;
     }
     #copertina{
         margin-top: 10px;
         margin-left: 20px;
     }
-    #collegamento{
-        position: relative;
-        top: 0px;
-        color: white;
-    }
-    #dati1{
-        margin-left: 20px;
-        margin-top: 0px;
-    }
-    #dati2{
-        margin-left: 20px;
-        margin-top: -4px;
-        /* padding-bottom: 30px; */
-        
-    }
-    #info1{
-        position: relative;
-        margin-left: 0px;
-        margin-top: 0px;
-        left: 130px;
-        top: -83px;
-    }
-    #info2{
-        position: relative;
-        margin-left: 0px;
-        margin-top: 0px;
-        left: 130px;
-        top: -81px;
-    }
     #testo{
         margin-left: 10px;
         font-size: 15px;
+    }
+    .barra img{
+        width: 400px;
+        height: 400px;
     }
 
 }
