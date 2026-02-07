@@ -1,6 +1,6 @@
 /* Body */
 html{
-  booverflow-x: scroll;
+  overflow-x: scroll;
 }
 body{
     overflow-x: hidden;
