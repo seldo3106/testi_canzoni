@@ -1,4 +1,7 @@
 /* Body */
+html{
+  booverflow-x: scroll;
+}
 body{
     overflow-x: hidden;
     font-family: 'Work Sans';
